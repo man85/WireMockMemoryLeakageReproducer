@@ -1,0 +1,14 @@
+app/src/test/kotlin/app/FirstWireMockTest.kt
+  h_86c50d49f285ae 8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "bc1b7e77acb45e2c6b9eca6e99e772a18ef6703a",
+  "prompts": {},
+  "humans": {
+    "h_86c50d49f285ae": {
+      "author": "man85 <man85@yandex.ru>"
+    }
+  }
+}
