@@ -1,0 +1,47 @@
+app/src/test/kotlin/app/FirstWireMockTest.kt
+  s_d9c7b7e9c77226::t_b88046855ae77d 31-34
+  s_491a06da76bc54::t_ef53c0f1452896 1-12,17,19-30,35-43
+  s_d9c7b7e9c77226::t_7cbcd0b9ab0a46 13-16,18
+README.md
+  s_d9c7b7e9c77226::t_2251f87266c3a1 1-59
+  s_d9c7b7e9c77226::t_a4c9163d679e17 60-61
+app/build.gradle.kts
+  s_491a06da76bc54::t_7869fcbf1dc553 1-19
+app/src/test/kotlin/app/WireMockLeakCleaner.kt
+  s_491a06da76bc54::t_70773cbfcfd51b 1-8,12,14-46
+  s_d9c7b7e9c77226::t_55594de6ed8772 9-11,13
+gradle/wrapper/gradle-wrapper.properties
+  s_491a06da76bc54::t_6122a09acc3922 1-8
+app/src/test/kotlin/app/ZSecondWireMockTest.kt
+  s_d9c7b7e9c77226::t_adcfaa12cb253e 33-34
+  s_d9c7b7e9c77226::t_3c72ea0886d25e 12-17
+  s_d9c7b7e9c77226::t_b7a52f196d6719 9-11
+  s_d9c7b7e9c77226::t_db293504844bac 18-20,30-32
+  s_d9c7b7e9c77226::t_db13722a4f780e 35-37
+gradlew
+  s_491a06da76bc54::t_096da2523123cc 1-251
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f431fbadbd4f554034e4febf398219aac598bb71",
+  "prompts": {},
+  "sessions": {
+    "s_491a06da76bc54": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_e17019da3ffewC4ahlMK6v5gBA",
+        "model": "heavy"
+      },
+      "human_author": "man85 <man85@yandex.ru>"
+    },
+    "s_d9c7b7e9c77226": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_e07d75313ffekTbAC7QdLoEYpD",
+        "model": "heavy"
+      },
+      "human_author": null
+    }
+  }
+}
