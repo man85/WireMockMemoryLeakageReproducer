@@ -3,11 +3,11 @@ package app
 import com.github.tomakehurst.wiremock.WireMockServer
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.context.annotation.Import
 import org.springframework.test.annotation.DirtiesContext
+import org.wiremock.spring.ConfigureWireMock
+import org.wiremock.spring.EnableWireMock
+import org.wiremock.spring.InjectWireMock
 
 /**
  * Second class (after the first context is closed): verifies that the WireMockServer
@@ -18,11 +18,12 @@ import org.springframework.test.annotation.DirtiesContext
 // Uncomment to verify the fix (with WireMockLeakCleaner the build is green):
 //@Import(WireMockLeakFixConfig::class)
 @SpringBootTest
-@AutoConfigureWireMock(port = 0)
+@EnableWireMock(ConfigureWireMock(port = 0))
 @DirtiesContext
-class SecondWireMockTest(
-    @Autowired val server: WireMockServer,
-) {
+class SecondWireMockTest {
+
+    @InjectWireMock
+    lateinit var server: WireMockServer
 
     @BeforeEach
     fun `closed wiremock server must be collected`() {

@@ -4,9 +4,10 @@ import com.github.tomakehurst.wiremock.WireMockServer
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock
-import org.springframework.context.annotation.Import
 import org.springframework.test.annotation.DirtiesContext
+import org.wiremock.spring.ConfigureWireMock
+import org.wiremock.spring.EnableWireMock
+import org.wiremock.spring.InjectWireMock
 import java.lang.ref.WeakReference
 import kotlin.concurrent.thread
 
@@ -19,11 +20,12 @@ import kotlin.concurrent.thread
 // Uncomment to verify the fix (with WireMockLeakCleaner the build is green):
 //@Import(WireMockLeakFixConfig::class)
 @SpringBootTest
-@AutoConfigureWireMock(port = 0)
+@EnableWireMock(ConfigureWireMock(port = 0))
 @DirtiesContext
-class FirstWireMockTest(
-    @Autowired val server: WireMockServer,
-) {
+class FirstWireMockTest {
+
+    @InjectWireMock
+    lateinit var server: WireMockServer
 
     @Test
     fun `wiremock server is up`() {
